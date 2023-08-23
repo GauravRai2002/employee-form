@@ -14,6 +14,7 @@ function AddForm() {
     const expRef = useRef();
     const codeRef = useRef();
     const photoRef = useRef();
+    const joinRef = useRef();
     const CLOUD_NAME = 'dy4rzochf'
     const API_KEY = '648155248577273'
     const API_SECRET = '9sViz_LtXOAMoAHaQtBXgIRiSWg'
@@ -77,7 +78,8 @@ function AddForm() {
             'code': codeRef.current.value.toString(),
             'photo': photoRef.current.value.toString(),
             'dob': dobRef.current.value.toString(),
-            'url': url
+            'url': url,
+            'join': joinRef.current.value.toString(),
         }
 
         setUrl(url)
@@ -92,7 +94,7 @@ function AddForm() {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
-        }).then(()=>{
+        }).then(() => {
             setUploaded(true)
         })
 
@@ -187,9 +189,16 @@ function AddForm() {
                         </label>
                         <input ref={photoRef} type="file" accept="image/png, image/jpeg" className="file-input file-input-bordered file-input-accent w-full max-w-xs" />
                     </div>
-                    <div className="button flex items-center mt-8 justify-center w-full">
-                        <button onClick={handleSubmit} type='submit' className="btn btn-accent px-8">Subimt Form</button>
+
+                    <div className="form-control w-full">
+                        <label className="label">
+                            <span className="label-text">Date Of Joining :</span>
+                        </label>
+                        <input ref={joinRef} type="date" placeholder="Type here" className="input input-bordered w-full" />
                     </div>
+                </div>
+                <div className="button flex items-center mt-8 justify-center w-full">
+                    <button onClick={handleSubmit} type='submit' className="btn btn-accent px-8">Subimt Form</button>
                 </div>
 
 
