@@ -31,6 +31,7 @@ function AddForm() {
     }
 
     const handleSubmit = (e) => {
+        setUploaded(false)
         e.preventDefault();
 
 
@@ -47,7 +48,7 @@ function AddForm() {
 
     const uploadImg = () => {
         try {
-            fetch('http://localhost:5000/employee/upload', {
+            fetch('https://back-end-form.vercel.app/upload', {
                 method: 'POST',
                 body: JSON.stringify({
                     data: imageSource
@@ -81,7 +82,7 @@ function AddForm() {
 
         setUrl(url)
         setError(false)
-        fetch('http://localhost:5000/employee/add', {
+        fetch('https://back-end-form.vercel.app/add', {
             method: 'POST',
             body: JSON.stringify(data),
             // headers: {

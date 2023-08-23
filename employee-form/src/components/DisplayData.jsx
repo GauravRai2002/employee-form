@@ -14,7 +14,7 @@ function DisplayData() {
     }
 
     const handleGetRequest = () => {
-        fetch(`http://localhost:5000/employee/getEmp/${codeRef.current.value}`)
+        fetch(`https://back-end-form.vercel.app/getEmp/${codeRef.current.value}`)
             .then(res => res.json())
             .then((data) => {
                 setEmpData(data)
