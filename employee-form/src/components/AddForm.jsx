@@ -109,17 +109,17 @@ function AddForm() {
                 <span>SUCCESS ! All Details Uploaded Successfully !</span>
             </div></> : <></>}
 
-            <form className='flex flex-col gap-8 w-full h-fit md:w-2/3 bg-neutral-800 mx-auto border-2 border-teal-600 rounded-lg py-8 px-2 my-6'>
+            <form className='flex flex-col gap-8 w-full h-fit md:w-2/3  mx-auto border-2 border-teal-600 rounded-lg py-8 px-2 my-6'>
                 <div className='area flex-col md:flex-row flex w-full items-center justify-center gap-6 h-fit px-4 md:px-9'>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Full Name</span>
+                            <span className="label-text">Full Name :</span>
                         </label>
                         <input ref={nameRef} type="text" placeholder="Type here" className="input input-bordered w-full" />
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Father's Name</span>
+                            <span className="label-text">Father's Name :</span>
                         </label>
                         <input ref={fatherNameRef} type="text" placeholder="Type here" className="input input-bordered w-full" />
                     </div>
@@ -127,13 +127,13 @@ function AddForm() {
                 <div className='area flex-col md:flex-row flex w-full items-center justify-center gap-6 h-fit px-4 md:px-9'>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Guarnter's Name</span>
+                            <span className="label-text">License Number :</span>
                         </label>
                         <input ref={guarnterRef} type="text" placeholder="Type here" className="input input-bordered w-full" />
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Code</span>
+                            <span className="label-text">Code :</span>
                         </label>
                         <input ref={codeRef} type="text" placeholder="Type here" className="input input-bordered w-full" />
                     </div>
@@ -141,13 +141,13 @@ function AddForm() {
                 <div className='area flex-col md:flex-row flex w-full items-center justify-center gap-6 h-fit px-4 md:px-9'>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Experience</span>
+                            <span className="label-text">Experience :</span>
                         </label>
                         <input ref={expRef} type="number" placeholder="Type here" className="input input-bordered w-full" />
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Date Of Birth</span>
+                            <span className="label-text">Date Of Birth :</span>
                         </label>
                         <input ref={dobRef} type="date" placeholder="Type here" className="input input-bordered w-full" />
                     </div>
